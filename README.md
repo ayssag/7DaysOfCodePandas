@@ -91,3 +91,96 @@ Você irá iniciar a limpeza e atribuir mais contexto aos seus dados para depois
     *Portanto, se um material tiver um código de localização 720, ele está dentro da classe geral de “**Belas Artes**”; ou se tiver um código 028, estará dentro da classe geral de “**Generalidades. Ciência e conhecimento**”.*
     
 </aside>
+
+# Dia 3/7 > Análise exploratória de dados e DateTime
+Por isso, o empréstimo dos materiais em uma biblioteca é uma das formas de se indicar o uso da informação. Entender a quantidade e quando se emprestaram os livros é uma das primeiras formas de fazer uma análise desse tipo. A diretoria da biblioteca gostaria de entender se a quantidade de empréstimos está diminuindo, aumentando ou permanecendo igual ao decorrer dos últimos anos. A diretoria também gostaria de gerenciar melhor os recursos humanos da biblioteca de acordo com a demanda de trabalho existente, como por exemplo:
+- gerenciar a programação de férias dos colaboradores de acordo com os meses de menor demanda;
+- programar atividades que não sejam de atendimento ao usuário para períodos específicos de menor demanda.
+Além do gerenciamento anual das atividades, a diretoria também necessita que seja planejada uma programação diária das atividades.
+
+## Etapas
+- [x] Verificar qual é a quantidade total de exemplares emprestados por cada ano e plotar um gráfico de linhas.
+- [x] Fazer uma análise em relação à visualização gerada.
+- [x] Gerar uma tabela com a quantidade total de exemplares emprestados por mês e descubrir quais meses são os que possuem a maior quantidade de empréstimos realizados.
+- [x] Plotar um gráfico de linhas.
+- [x] Trazer suas análises em relação a quais meses poderiam ser as melhores opções para férias dos colaboradores.
+- [x] Verificar quais foram os horários com maior quantidade de empréstimos ao longo de um dia inteiro.
+- [x] Plotar um gráfico de barras e analisar quais seriam os melhores horários para alocar as demais atividades que não sejam de atendimento ao usuário.
+
+## Dicas
+
+<aside>
+    💡
+    1. Atente-se para a quantidade de exemplares emprestados, e não de empréstimos realizados. <br>
+    2. Verifique a quantidade de empréstimos pelos números de ID. <br>
+    3. Investigue pela relação deles com o ID dos exemplares. <br>
+    4. O groupby poderá te ajudar nesse desafio. <br>
+    5. Transforme as datas em tipo Datetime. <br>
+</aside>
+
+# Dia 4/7 > Análise exploratória de dados e Variáveis
+O objetivo será entender a quantidade de empréstimos a partir das variáveis categóricas do seu conjunto de dados. Vamos explorar algumas das variáveis categóricas das quais precisaremos extrair mais informações. Elas são:
+- Tipo de vínculo
+- Coleção
+- Biblioteca
+- Classificação geral da CDU
+
+Para explorar os dados, alguns questionamentos serão pertinentes para a diretoria das bibliotecas, como:
+- <em>“Como se distribuem os empréstimos de exemplares pelos tipos de vínculo dos usuários?”</em>
+Desta forma, a diretoria poderá entender qual é o público que está utilizando a biblioteca e assim tomar decisões em continuar com a estratégia de negócio atual ou modificá-la.
+
+- Quais coleções são mais emprestadas?
+Da mesma forma, as coleções. Ranquear as coleções mais emprestadas pelo público, será bastante importante para a estratégia atual.
+
+- Quais são as bibliotecas com mais ou menos quantidade de empréstimos?
+Assim, a diretoria conseguirá entender onde ela deverá melhorar e focar suas iniciativas.
+
+## Etapas
+- [x] Gerar uma tabela de frequência e com o percentual para cada variável.
+- [ ] Trazer algumas das suas percepções para as análises com o que você poderá contribuir para a diretoria da biblioteca.
+- [ ] Apontar algumas outras métricas que poderiam entrar aqui para enriquecer essa análise.
+<em>"De quais temas da CDU são os exemplares emprestados?"</em>
+Entender quais os temas mais procurados pelos usuários é fundamental para o desenvolvimento de novos planos de marketing do acervo. Para que possam não apenas fortalecer o que está sendo utilizado, mas também promover o que não está.
+
+## Dicas
+<aside>
+    1. Como é um trabalho repetitivo, crie uma função que gere a tabela com os valores. <br>
+    2. Para arredondar os números do percentual, você pode utilizar a função built-in do Python Round(). <br>
+</aside>
+
+# Dia 5/7 > Análise exploratória de dados e Boxplot
+O Boxplot é uma das visualizações mais poderosas que existe, pois ele permite que você visualize medidas estatísticas como a mediana, os quartis, os valores mínimos e máximos e os valores atípicos outliers. 
+![image](https://github.com/user-attachments/assets/ee56f0fb-1cb4-44ae-b7a3-eea43279cab2)
+
+É importante realizar avaliações constantes do uso da biblioteca e entender em quais cenários (tipos de usuários, estratégias de marketing, atualização de acervo, cenário sócio-político interno e externo) é melhor manter a estratégia atual ou mudá-la. Você vai fazer dois recortes em seus dados para entender como eles se distribuíram ao decorrer desses anos e, desta forma, possa trazer inferências para levar à diretoria da biblioteca, a fim de que eles possam tomar decisões para o ano atual. Você vai avaliar dentre os alunos de graduação e pós graduação a distribuição de empréstimos mensais por ano realizados entre 2010 e 2020 da coleção que tiver a maior frequência de empréstimos.
+
+## Etapas
+- [x] Plotar um gráfico para cada tipo de usuário.Tenha um boxplots para cada ano.
+- [ ] Analisar o que ocorreu.
+<aside>
+    <em>
+        "O que está ocorrendo ao decorrer do tempo?" <br>
+        "Houve algum ano ou anos em específico que te chamaram atenção para alguma diferença?" <br>
+        "Quais as maiores diferenças entre os empréstimos para os alunos de graduação e pós graduação?" <br>
+    </em>
+</aside>
+
+## Dicas
+<aside>
+    💡 Desenvolva a tarefa uma etapa por vez: <br>
+    1. Verifique qual é a coleção com maior frequência para cada tipo de usuário.<br>
+    2. Filtre os dados com condições solicitadas <br>
+    3. Selecione apenas os empréstimos <br>
+    4. Faça a contagem de empréstimos mensais por cada ano <br>
+    5. Crie uma função para gerar a visualização do gráfico de box plot por cada ano. <br>
+    6. Crie o gráfico de boxplot <br>
+</aside>
+<hr>
+<aside>
+    💡 Bibliotecas para plotar os gráficos <br>
+    - Matplotlib <br>
+    - Pandas <br>
+    - Seaborn <br>
+    - Plotly <br>
+</aside>
+
